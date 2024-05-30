@@ -30,6 +30,43 @@
         });
     </script>
     <style>
+        //responsive
+        @media only screen and (max-width: 600px) {
+    header {
+        height: 80px;
+    }
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #nav ul li {
+        margin-inline: 0;
+        margin-bottom: 10px;
+    }
+    #pic1 {
+        margin-top: 20px;
+    }
+    #pic1 img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+    #spec {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .year {
+        margin-top: 10px;
+        font-size: 1em;
+    }
+    .content {
+        margin: 10px auto;
+    }
+    .description {
+        margin-left: 0;
+    }
+}
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; }
         header {
