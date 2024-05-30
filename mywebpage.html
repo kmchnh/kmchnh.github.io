@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>kch</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function route() {
+                var hash = window.location.hash;
+                var content = $("#content");
+                var pic1 = $("#pic1");
+
+                if ($(hash).length) {
+                    content.html($(hash).html());
+                    pic1.hide();
+                } else {
+                    content.html("");
+                    pic1.show();
+                }
+            }
+
+            $('#nav ul li').hover(function () {$(this).addClass('hover');}, 
+                function () {$(this).removeClass('hover');}
+            );
+
+            $(window).on("hashchange", route);
+            route();
+        });
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: white;
+        }
+        #title a {
+            text-decoration: none;
+            color: #000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: white;
+        }
+        #nav ul li {
+            list-style: none;
+            margin-inline: 75px;
+        }
+        #nav ul li.hover {
+            background-color: rgb(0, 140, 255);
+        }
+        #nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+        }
+        #pic1 {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #pic1 img {
+            width: 350px;
+            height: 400px;
+            margin-right: 10px;
+        }
+        .info {
+            margin: 10px 0;
+            text-align: left;
+        }
+        #spec {
+            margin-top: 290px;
+            font-style: Arial, sans-serif;
+        }
+        #spec :first-child {
+            color: #000;
+            font-size: 2em;
+        }
+        #spec h6 {
+            margin-left: 3%;
+        }
+        #spec h5 {
+            font-weight: 200;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .year {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .description {
+            margin-left: 20px;
+        }
+        h2 {
+            color: #3d76d0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="title"><a href="#">CHKIM</a></div>
+    </header>
+    <div id="container">
+        <nav id="nav">
+            <ul>
+                <li><a href="#PROFILE">PROFILE</a></li>
+                <li><a href="#ABOUT">ABOUT</a></li>
+                <li><a href="#EXPERIENCE">EXPERIENCE</a></li>
+            </ul>
+        </nav>
+        <div id="content"></div>
+        <div id="pic1">
+            <img src="C:\Users\lacks\OneDrive\사진\KakaoTalk_20240527_100622279.jpg" alt="사진">
+            <div id="spec">
+                <h2>김찬희</h2>
+                <h6>Kim, Chanhee</h6>
+                <br>
+                <h5>강원대학교 컴퓨터공학과</h5>
+                <h5>lacksl159kangwon.ac.kr</h5>
+            </div>
+        </div>
+
+    <div id="PROFILE" class="hidden">
+        <div class="content">
+            <div class="year">소개</div>
+            <h2>소개</h2>
+            <div class="description">안녕하세요. 저는 현재 강원대학교 컴퓨터공학과 3학년에 재학 중인 김찬희입니다. 군 복무를 마친 후 2024학년도에 강원대학교로 편입학하였습니다.
+            저는 정보보안전문가가 되는 것을 목표로 공부하고 있습니다. 정보보안 전문가로의 길을 선택하게 된 계기는 처음에는 다소 불순한 의도에서 시작되었습니다.
+            어린 시절 게임을 하면서 '게임을 해킹해서 내가 원하는 모든 것을 자유롭게 해보고 싶다'라는 생각을 하게 되었고, 이로 인해 자연스럽게 컴퓨터에 관심을 가지게 되었습니다.
+            고등학교에 진학하면서부터는 컴퓨터에 대한 흥미를 더욱 발전시켰습니다. 고등학교 3년 내내 코딩 동아리에서 활발히 활동하였고, 그 경험이 저를 대학에서 컴퓨터공학을 전공하게 만든 중요한 동기가 되었습니다.
+            대학에 진학한 후에는 컴퓨터과학의 다양한 분야를 접하게 되었고, 그 중에서도 특히 보안 트랙이 다른 컴퓨터공학 트랙에 비해 큰 재미를 느낄 수 있었습니다.
+            <br><br>
+            보안 분야는 끊임없이 변화하고 발전하는 기술과 맞물려 다양한 도전과 기회를 제공하는 영역이기 때문에, 저는 제 최종 진로를 정보보안전문가로 정하게 되었습니다.
+            정보보안 관련 업무는 매우 다양합니다.그 중에서도 저는 특히 기업에서 모의해킹을 하는 데 큰 관심을 가지고 있습니다.
+            모의해킹은 실제 해커의 공격을 시뮬레이션하여 시스템의 취약점을 찾아내고 이를 보완하는 과정을 통해 기업의 정보 자산을 보호하는 중요한 역할을 합니다.
+            이 과정에서 다양한 해킹 기법과 방어 기술을 학습하고 적용할 수 있어 제게는 매우 흥미롭고 도전적인 분야라고 생각합니다. 제가 이 목표를 이루기 위해 현재 집중하고 있는 부분은 대학교 컴퓨터 공학 과정을 충실히 이행하는 것입니다.
+            저는 정보보안 관련 자격증 취득을 목표로 공부하고 있습니다. 앞으로도 꾸준한 학습과 실습을 통해 정보보안 분야에서의 전문성을 쌓아 나가고, 기업의 정보 자산을 지키는 데 기여할 수 있는 정보보안전문가로 성장하고 싶습니다.
+            </div>
+        </div>
+    </div>
+
+        <div id="ABOUT" class="hidden">
+            <div class="content">
+                <div class="year">About me</div>
+                <h2>여가 및 취미</h2>
+                <div class="description">
+                저는 여가 시간에 주로 여자친구와 함께 시간을 보냅니다. 시간이 나면 새로운 곳에 놀러가거나, 카페에 가서 몇 시간씩 떠들면서 시간을 보냅니다. 최근에는 여자친구가 일을 잠시 쉬면서 더 많은 시간을 함께 할 수 있게 되었습니다. 자주 만나다보니 학교나 업무에서 받은 스트레스가 쌓이지 않고 바로 해소되며 아주 쾌적한 생활을 하고 있습니다.
+                <br><br>
+                여자친구를 만나지 않을 때는 주로 게임을 합니다. 어릴 적부터 게임을 시작해 아직까지도 저의 큰 취미입니다. 저는 특히 RPG 게임을 좋아하는데, 요즘에는 RPG 게임에 시간을 쓰는 것에 회의를 느껴 예전처럼 자주 하지는 않지만 계속 관심을 갖고 있습니다.
+                <br><br>
+                게임을 예전만큼 잘 안 하면서 새로 생긴 취미가 노래 부르기입니다. 노래를 부르며 아무 생각 없이 큰 소리를 내면 감정이 상쾌해지는데 이게 저에게 큰 힐링이 됩니다. 최근에는 드럼에도 관심을 가지게 되었습니다. 원래는 베이스를 쳤는데, 드럼이 주는 시원한 타격감이 제 마음 속 깊은 곳에 있는 걱정, 불안까지 두드려 없애주는 기분이 듭니다.
+                <br><br>
+                영화보기 또한 제가 옛날부터 즐겨하는 취미 중 하나로 영화로 대리만족을 많이 하는 편입니다. 장르는 가리지 않고 다양하게 보는 편입니다. 하지만 SF, 액션, 스릴러 영화를 특히 좋아합니다. SF는 혼자서만 하는 망상을 현실로 구현해 주는 것 같아 좋아합니다. 우주 관련 SF는 몇 번씩 반복해서 돌려 볼 정도입니다. 액션 또한 비슷한 맥락에서 좋아합니다. 현실적이지만 내가 할 수 없는 것들을 하기 때문입니다. 스릴러는 숨막히는 긴장감 속에서 느껴지는 감정과 그것이 해소되었을 때 긴장이 확 풀리면서 매운 것을 먹은 듯이 스트레스가 풀리는 기분이 좋기 때문에 선호하는 장르입니다.
+                </div>
+            </div>
+        </div>
+
+        <div id="EXPERIENCE" class="hidden">
+            <div class="content">
+                <div class="year">2012~2015</div>
+                <h2>미국생활</h2>
+                <div class="description">
+                    2012년, 나는 미국으로 이주하게 되었다. 이 새로운 환경에서의 생활은 나에게 많은 도전과 기회를 제공했다. 처음 미국에 도착했을 때는 모든 것이 낯설고 두려웠지만, 점차 새로운 문화와 사람들에게 적응해 나가면서 나 자신도 변화하고 있음을 느낄 수 있었다.
+                    <br><br>
+                    처음에는 언어 장벽이 가장 큰 어려움이었다. 영어를 잘하지 못해 의사소통에 어려움을 겪었지만, 학교와 지역사회에서 다양한 활동에 참여하면서 영어 실력이 점점 향상되었다. 수업 시간에는 이해하지 못하는 부분이 많았지만, 선생님들과 친구들의 도움으로 점차 적응해 나갔다. 특히, 학급 토론이나 그룹 프로젝트를 통해 영어로 자신의 생각을 표현하고 타인의 의견을 경청하는 법을 배웠다. 이러한 경험은 나의 언어 능력을 향상시켰을 뿐만 아니라, 자신감을 키우는 데도 큰 도움이 되었다.
+                    <br><br>
+                    또한, 미국에서의 생활은 나의 시야를 넓혀주었다. 다양한 인종과 문화 배경을 가진 사람들과의 교류를 통해 다문화 사회에서의 포용과 이해의 중요성을 깨닫게 되었다. 학교에서 진행된 다양한 문화 행사와 지역 축제에 참여하면서, 각기 다른 문화의 아름다움과 그 속에 담긴 의미를 이해하게 되었다. 이러한 경험은 나의 세계관을 넓혀주었고, 다른 사람들을 더 존중하고 이해하려는 태도를 가지게 만들었다.
+                </div>
+
+                <div class="year">2022~2023</div>
+                <h2>카투사</h2>
+                <div class="description">
+                    2022년, 나는 한국으로 돌아와 카투사(KATUSA, Korean Augmentation To the United States Army)로 복무하게 되었다. 카투사 복무는 나에게 또 다른 도전이자 성장의 기회였다. 군 생활을 통해 나는 더욱 성숙해지고, 어른으로서의 책임감을 느끼게 되었다.
+                    <br><br>
+                    카투사로 복무하면서 영어 실력은 물론이고, 리더십과 협동의 중요성을 다시 한번 깨닫게 되었다. 미군과 함께 생활하며, 영어를 사용해야 하는 상황이 많았다. 덕분에 영어 실력은 더욱 향상되었고, 국제적인 감각도 키울 수 있었다. 또한, 다양한 훈련과 업무를 통해 신체적, 정신적으로 더욱 강인해졌다. 특히, 미군과의 협력 업무를 통해 팀워크와 커뮤니케이션 능력을 기를 수 있었다. 서로 다른 배경을 가진 사람들이 함께 목표를 이루기 위해 협력하는 과정에서 많은 것을 배울 수 있었다.
+                    <br><br>
+                    군 복무 기간 동안 나는 많은 것을 배우고 느끼며, 성숙해졌다. 어려운 상황에서도 포기하지 않고 최선을 다하는 법을 배웠고, 책임감과 리더십을 기를 수 있었다. 또한, 동료들과의 끈끈한 유대감은 나에게 큰 힘이 되었다. 서로를 믿고 의지하며 함께 어려움을 극복해 나가는 과정에서 진정한 우정과 동료애를 느낄 수 있었다. 이러한 경험들은 나에게 큰 자산이 되었고, 앞으로의 삶에서도 큰 도움이 될 것이다.
+                </div>
+            </div>`
+            </div>
+        </div>
+    </div>
+</body>
+</html>
